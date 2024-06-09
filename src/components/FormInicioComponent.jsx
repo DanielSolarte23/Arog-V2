@@ -8,10 +8,10 @@ export default function FormInicio() {
         <div className="w-1/2 h-full  flex flex-col justify-evenly">
             <h1 className="bienv h-[10%] -mb-10 flex items-center justify-center text-5xl">Bienvenido</h1>
             <form className="flex flex-col w-full h-2/3 pr-7  justify-evenly items-center">
-                <div className="relative w-3/4 h-14"><input className="pl-12 border-b-4 w-full h-full focus:border-b-4  focus:border-verde-principal focus:outline-none text-xl -mb-5 hover:border-verde-principal bt2" type="text" placeholder="Nombre de usuario"></input>
+                <div className="relative w-3/4 h-14 -mb-5"><input className="pl-12 border-b-4 w-full h-full focus:border-b-4  focus:border-verde-principal focus:outline-none text-xl  hover:border-verde-principal bt2" type="text" placeholder="Nombre de usuario"></input>
                 <i className="fa-solid fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-verde-principal"></i>
                 </div>
-                <div className="relative w-3/4 h-14"><input className=" pl-12 border-b-4 w-full h-full focus:border-b-4  focus:border-verde-principal focus:outline-none text-xl -mb-5 hover:border-verde-principal bt2" type="text" placeholder="Contraseña"></input>
+                <div className="relative w-3/4 h-14 -mb-5"><input className=" pl-12 border-b-4 w-full h-full focus:border-b-4  focus:border-verde-principal focus:outline-none text-xl  hover:border-verde-principal bt2" type="text" placeholder="Contraseña"></input>
                 <i className="fa-solid fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-2xl text-verde-principal"></i>
                 </div>
                 <p className="w-3/4 flex justify-between text-lg text-left -mb-7">¿Olvido su contraseña?<strong className="text-verde-principal"> Recuperar</strong></p>
