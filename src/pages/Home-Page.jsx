@@ -7,7 +7,7 @@ import Footer from "../components/Footer-icons"
 
 export default function HomePagina (){
     return (
-        <div className="h-screen w-full flex">
+        <div className="h-screen w-full">
         <Header />
         <Bienvenida />
         <Footer />

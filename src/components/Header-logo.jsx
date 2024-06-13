@@ -5,9 +5,9 @@ export default function Header() {
     return (
         <>
         {/* Encabezado*/}
-        <header>
+        <header className="w-full h-[20%] flex justify-around bg-blue-200">
             {/* contenedor del logo y texto*/}
-            <section>
+            <section className="w-80 bg-blue-400">
                 <img src="src/images/logoArogNuevo.png" alt="AROG"/>
                 <p>Asociación de recicladores de oficio GOLEROS </p>
             </section>
