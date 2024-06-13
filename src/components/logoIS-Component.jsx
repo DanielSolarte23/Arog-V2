@@ -1,5 +1,5 @@
 import React from "react"
-import LogoInicio from "../images/Inicio-Sesion.svg"
+import LogoInicio from "../images/Inicio-Sesion.png"
 
 export default function LogoIS() {
     return (
