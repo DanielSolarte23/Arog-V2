@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 export default function FormInicio() {
     return (
         <div className="w-1/2 h-full  flex flex-col justify-evenly">
+            
             <h1 className="bienv h-[10%] -mb-10 flex items-center justify-center text-5xl">Bienvenido</h1>
             <form className="flex flex-col w-full h-2/3 pr-7  justify-evenly items-center">
                 <div className="relative w-3/4 h-14 -mb-5"><input className="pl-12 border-b-4 w-full h-full focus:border-b-4  focus:border-verde-principal focus:outline-none text-xl  hover:border-verde-principal bt2" type="text" placeholder="Nombre de usuario"></input>
