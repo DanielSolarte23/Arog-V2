@@ -1,0 +1,83 @@
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+
+
+  #header1 {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+    height: 10%;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+
+  .navegacion {
+    display: none;
+  }
+
+  .contenedor-logo {
+    width: 80%;
+    padding: 0;
+  }
+
+  .contenedor-img {
+    width: 19%;
+  }
+  .contenedor-text p{
+    font-size: 15px;
+  }
+  .contenedor-text span{
+    font-size: 32px;
+  }
+  .navegacion{
+    flex-direction: column;
+  }
+  .nav-responsive ul{
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .nav-responsive ul div{
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-responsive ul li a span {
+    display: none;
+  }
+  .contenedor-bienvenida{
+    margin-top: 70px;
+    width: 100%;
+    padding: 0;
+    height: 65%;
+    padding: 0 30px 0 30px;
+
+}
+  .contenedor-bienvenida section{
+    width: 100%;
+    padding: 0;
+  }
+  .contenedor-bienvenida section img{
+    height: 75%;
+    position: relative;
+    left: 150px;
+    top: 65px;
+  }
+  .contenedor-bienvenida article{
+    position: absolute;
+    left: 50px;
+    top: 380px;
+  }
+  .contenedor-bienvenida article h1{
+    font-size: 30px;
+  }
+  .contenedor-bienvenida article p{
+    font-size: 22px;
+  }
+  
+}
+
+.menu-nav{
+    display: none;
+    
+}
