@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../styles/homePage.css"
+import "../../styles/homePage.css"
 
 export default function Header() {
   useEffect(() => {
