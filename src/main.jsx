@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Servicios from './pages/servicios-page'
+import App from "./App"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Servicios  />
+    <App/>
   </React.StrictMode>,
+
 )

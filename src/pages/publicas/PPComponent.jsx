@@ -23,7 +23,6 @@ export default function PPage() {
                 </div>
             </header>
             <BarraNav />
-            
         </main>
     )
 }
