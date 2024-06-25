@@ -1,7 +1,8 @@
 import React from "react";
-import imagen from '../images/imagenVenta.jpg';
-import foto from '../images/imagenRecoleccion.jpg';
-import fotis from '../images/imagenEstudioi.jpg';
+import imagen from '../../images/imagenVenta.jpg';
+import foto from '../../images/imagenRecoleccion.jpg';
+import fotis from '../../images/imagenEstudioi.jpg';
+
 
 function Pagina() {
     return (
