@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/homePage.css"
+import "../../styles/homePage.css"
 
 
 export default function imgFondo() {

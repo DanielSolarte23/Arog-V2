@@ -1,23 +1,7 @@
-import React, { useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../styles/homePage.css"
+import "../../styles/homePage.css"
 
 export default function Header() {
-  useEffect(() => {
-    const header = document.getElementById("header1");
-
-    //Agrega funcion al hacer scroll hacia abajo
-    const handleScroll = () => {
-      header.style.position = "fixed";
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    //devuelve la barra a su estado original
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   //Funcion que agrega el estido display block al div al hacer click
   const mostrar = () => {
     const nav = document.querySelector(".navegacion");
@@ -51,7 +35,7 @@ export default function Header() {
           </p>
         </article>
       </section>
-      <div onClick={mostrar} id="menu-nav">x</div>
+      <div onClick={mostrar} id="menu-nav"><i className="fa-solid fa-bars"></i></div>
       {/* contenedor del menu*/}
       <nav className="flex w-1/2 items-center navegacion">
         <ul className="flex w-full justify-between px-8 font-semibold text-xl">
