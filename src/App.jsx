@@ -1,10 +1,10 @@
-import React from "react"
-import HomePagina from "./pages/publicas/Home-Page";
+import BarraLateral from "./components/admins/BarraLateral";
+
 
 export default function App(){
     return(
         <>
-        <HomePagina/>
+        <BarraLateral/>
         
         </>
     );
