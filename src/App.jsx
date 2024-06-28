@@ -1,9 +1,11 @@
 import React from "react"
-import Imagen from "./components/admins/Imagen";
+
+import Tareas from "./components/admins/Tareas";
 export default function App(){
     return(
         <>
- <Imagen/>
+<Tareas/>
+
         </>
     );
 }
