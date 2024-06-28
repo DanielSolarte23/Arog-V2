@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "../components/Card-Recoleccioncomponent"
+import Card from "../components/publicas/Card-Recoleccioncomponent"
 
 
 
