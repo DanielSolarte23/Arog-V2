@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'verde-principal': '#72aa00',
+        'Gris': '#d1d1d1',
       },
       fontFamily: {
         "ablack": 'ArchivoBlack',
