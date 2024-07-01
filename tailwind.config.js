@@ -9,6 +9,7 @@ export default {
       colors: {
         'verde-principal': '#72aa00',
         'Gris': '#d1d1d1',
+        'Cafe-footer': '#635B4F',
       },
       fontFamily: {
         "ablack": 'ArchivoBlack',
