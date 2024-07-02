@@ -1,12 +1,12 @@
 import React from "react"
-import Insidencias from "./components/admins/Historial-Insidencias"
+import Informacion from "./components/admins/Informacion-fotos"
 
 
 
 export default function App(){
     return(
         <>
-            <Insidencias/>
+            <Informacion />
         </>
     );
 };
