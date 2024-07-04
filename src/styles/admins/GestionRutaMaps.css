@@ -19,7 +19,7 @@
     border: 2px solid #a1a1a1; /* Color del borde inicial */
     border-radius: 0.25rem;
     background-color: white;
-    position: relative;
+
 }
 
 .custom-checkbox:checked {

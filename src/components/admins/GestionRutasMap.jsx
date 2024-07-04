@@ -5,8 +5,8 @@ import HistorialEnRuta from "./HistorialEnRuta";
 
 export default function Maps() {
   return (
-    <div className="h-screen">
-      <header className="h-[10%] flex justify-between px-5 items-center">
+    <div className="h-full ">
+      <header className="h-[10%] pl-16 flex justify-between px-5 items-center">
         <div className="flex gap-4">
           <button className="bg-verde-principal px-5 py-3 rounded-xl flex justify-center font-semibold text-base h-full">
             +Añadir Ruta
@@ -34,16 +34,16 @@ export default function Maps() {
               className="px-5 py-3 border border-gray-300 h-full max-h-10 w-full"
               type="text"
             />
-            <i class="text-xl fa-solid fa-magnifying-glass absolute top-4 left-[190px]"></i>
+            <i className="text-xl fa-solid fa-magnifying-glass absolute top-4 left-[190px]"></i>
           </div>
         </div>
       </header>
-      <main className=" h-[45%] flex">
-        <table className="w-2/5 border-collapse h-full border-t-8 border-b-8 border-l-8 border-gray-200 ">
+      <main className="h-[45%] flex">
+        <table className="w-2/5 border-collapse h-full border border-gray-300">
           <thead>
             <tr>
-              <td className="black w-[10%] h-[15%] pl-2 border-x-4 text-center  border-gray-200">
-                <div class="flex items-center">
+              <td className="black w-[10%] h-[15%] pl-2 border-x-2 text-center  border-gray-300">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -51,8 +51,8 @@ export default function Maps() {
                   />
                 </div>
               </td>
-              <td className="black  pl-2 border-x-4 border-gray-200">
-                <div class="flex items-center">
+              <td className="black w-[10%] pl-2 border-x-2 border-gray-300">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -76,7 +76,7 @@ export default function Maps() {
           <tbody className="">
             <tr className="border-t-4 h-20 border-gray-200">
               <td className=" w-[10%] pl-2 text-center">
-                <div class="flex items-center">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -85,8 +85,8 @@ export default function Maps() {
                 </div>
               </td>
               <td className=" w-[10%] text-center">
-                <i class="fa-solid fa-gear ">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-gear ">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] pl-2">
@@ -101,7 +101,7 @@ export default function Maps() {
             </tr>
             <tr className="border-t-4 border-gray-200">
               <td className="w-[10%] pl-2 text-center">
-              <div class="flex items-center">
+              <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -109,9 +109,9 @@ export default function Maps() {
                   />
                 </div>
               </td>
-              <td className="w-[10%] h-20 text-center">
-                <i class="fa-solid fa-gear">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+              <td className="w-[10%] text-center">
+                <i className="fa-solid fa-gear">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] pl-2">
@@ -126,7 +126,7 @@ export default function Maps() {
             </tr>
             <tr className="border-t-4 border-gray-200">
               <td className=" w-[10%] pl-2 text-center">
-              <div class="flex items-center">
+              <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -135,8 +135,8 @@ export default function Maps() {
                 </div>
               </td>
               <td className=" w-[10%] text-center">
-                <i class="fa-solid fa-gear">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-gear">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] h-20 pl-2">
