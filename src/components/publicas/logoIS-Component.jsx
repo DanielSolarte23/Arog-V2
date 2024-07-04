@@ -1,5 +1,5 @@
 
-import LogoInicio from "../images/Inicio-Sesion.png"
+import LogoInicio from "../../images/Inicio-Sesion.png"
 
 export default function LogoIS() {
     return (

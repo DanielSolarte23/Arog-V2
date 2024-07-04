@@ -2,7 +2,7 @@ import images from "../../images/imagenEstudioi.jpg";
 
 export default function SobreNosotros() {
   return (
-    <main className="w-full h-screen flex flex-col items-center">
+    <main id="SobreNosotros" className="w-full h-screen border border-red-500 flex flex-col items-center">
     <div className=" text-2xl w-full h-[15%] flex justify-center items-center font-bold">
       <h1 className="">
         Sobre nosotros
