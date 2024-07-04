@@ -4,8 +4,8 @@ import "../../styles/admins/GestionRutaMaps.css";
 
 export default function Maps() {
   return (
-    <div className="h-screen">
-      <header className="h-[10%] flex justify-between px-5 items-center">
+    <div className="h-full ">
+      <header className="h-[10%] pl-16 flex justify-between px-5 items-center">
         <div className="flex gap-4">
           <button className="bg-verde-principal px-5 py-3 rounded-xl font-semibold text-base h-full max-h-10">
             +Añadir Ruta
@@ -33,16 +33,16 @@ export default function Maps() {
               className="px-5 py-3 border border-gray-300 h-full max-h-10 w-full"
               type="text"
             />
-            <i class="text-xl fa-solid fa-magnifying-glass absolute top-4 left-[190px]"></i>
+            <i className="text-xl fa-solid fa-magnifying-glass absolute top-4 left-[190px]"></i>
           </div>
         </div>
       </header>
-      <main className="border-2 border-green-500 h-[45%] flex">
+      <main className="h-[45%] flex">
         <table className="w-2/5 border-collapse h-full border border-gray-300">
           <thead>
             <tr>
               <td className="black w-[10%] h-[15%] pl-2 border-x-2 text-center  border-gray-300">
-                <div class="flex items-center">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -51,7 +51,7 @@ export default function Maps() {
                 </div>
               </td>
               <td className="black w-[10%] pl-2 border-x-2 border-gray-300">
-                <div class="flex items-center">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -75,7 +75,7 @@ export default function Maps() {
           <tbody>
             <tr className="border-t-2 border-gray-300">
               <td className=" w-[10%] pl-2 text-center">
-                <div class="flex items-center">
+                <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -84,8 +84,8 @@ export default function Maps() {
                 </div>
               </td>
               <td className=" w-[10%] text-center">
-                <i class="fa-solid fa-gear ">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-gear ">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] pl-2">
@@ -100,7 +100,7 @@ export default function Maps() {
             </tr>
             <tr className="border-t-2 border-gray-300">
               <td className="w-[10%] pl-2 text-center">
-              <div class="flex items-center">
+              <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -109,8 +109,8 @@ export default function Maps() {
                 </div>
               </td>
               <td className="w-[10%] text-center">
-                <i class="fa-solid fa-gear">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-gear">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] pl-2">
@@ -125,7 +125,7 @@ export default function Maps() {
             </tr>
             <tr className="border-t-2 border-gray-300">
               <td className=" w-[10%] pl-2 text-center">
-              <div class="flex items-center">
+              <div className="flex items-center">
                   <input
                     type="checkbox"
                     id="myCheckbox"
@@ -134,8 +134,8 @@ export default function Maps() {
                 </div>
               </td>
               <td className=" w-[10%] text-center">
-                <i class="fa-solid fa-gear">
-                  <i class="text-[10px] fa-solid fa-chevron-down"></i>
+                <i className="fa-solid fa-gear">
+                  <i className="text-[10px] fa-solid fa-chevron-down"></i>
                 </i>
               </td>
               <td className="w-[27%] pl-2">

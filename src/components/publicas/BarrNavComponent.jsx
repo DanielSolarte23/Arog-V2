@@ -1,7 +1,7 @@
-import React from "react";
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { useState } from "react";
-import "../styles/barnav.css"
+
+import "../../styles/publicas/barnav.css"
 
 
 

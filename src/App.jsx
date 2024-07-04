@@ -1,11 +1,9 @@
-import BarraLateral from "./components/admins/BarraLateral";
-
+import React from "react";
 
 export default function App(){
     return(
         <>
-        <BarraLateral/>
-        
+
         </>
     );
 };
