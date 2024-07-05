@@ -61,7 +61,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="#">Crear cuenta</a>
+              <Link to="Registro">Crear cuenta</Link>
             </li>
           </div>
         </ul>

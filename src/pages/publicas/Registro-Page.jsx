@@ -1,6 +1,6 @@
 import React from "react"
-import LogoIS from "../components/logoIS-Component"
-import FormRegistro from "../components/FormRegistroComponent"
+import LogoIS from "../../components/publicas/logoIS-Component"
+import FormRegistro from "../../components/publicas/FormRegistroComponent"
 
 export default function Registro (){
     return (
