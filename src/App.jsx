@@ -1,10 +1,10 @@
 import React from "react"
-import Home from "./pages/publicas/Home-Page"
+import Estadisticas from "./components/admins/Estadisticas"
 
 export default function App (){
     return(
         <>
-        <Home/>
+        <Estadisticas/>
         </>
     );
 };
