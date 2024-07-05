@@ -3,7 +3,7 @@ import Contactos from './Contactos'
 import Redes from './Redes'
 import Acerca from './Acerca'
 
-const Footer = () => {
+const FooterHome = () => {
   return (
     <div className='bg-Cafe-footer h-72	fixed bottom-0'>
       <article className='display flex justify-between text-center '>

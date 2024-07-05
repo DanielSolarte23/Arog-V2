@@ -56,31 +56,31 @@ const Tabla = () => {
 
    fondo.style.backgroundColor= "#d1d4d17c"
   return (
-    <div className="container mx-auto mt-8">
+    <div className="box-border h-full">
       
 
-      <table className="w-full border-collapse border-2 border-gray-500 shadow-xl">
+      <table className="w-full border-collapse border-2 border-gray-500">
         <thead>
-          <tr className="bg-gray-200 text-gray-700 font-bold text-left">
-            <th className="py-2 px-4"></th>
-            <th className="py-2 px-4">Fecha</th>
-            <th className="py-2 px-4">Recipiente</th>
-            <th className="py-2 px-4">Vacío (Kg)</th>
-            <th className="py-2 px-4">LLeno (Kg)</th>
-            <th className="py-2 px-4">Diferencia (Kg)</th>
-            <th className="py-2 px-4">Responsable Arog</th>
-            <th className="py-2 px-4">Responsable Fuente</th>
-            <th className="py-2 px-4">Observaciones</th>
-            <th className="py-2 px-4">Añadir</th>
-            <th className="py-2 px-4">Editar</th>
-            <th className="py-2 px-4">Borrar</th>
+          <tr className="bg-gray-200 text-gray-700  font-normal text-center">
+            <th className="py-2 px-1 text-sm"></th>
+            <th className="py-2 px-1 text-sm">Fecha</th>
+            <th className="py-2 px-1 text-sm">Recipiente</th>
+            <th className="py-2 px-1 text-sm">Vacío (Kg)</th>
+            <th className="py-2 px-1 text-sm">LLeno (Kg)</th>
+            <th className="py-2 px-1 text-sm">Diferencia (Kg)</th>
+            <th className="py-2 px-1 text-sm">Responsable Arog</th>
+            <th className="py-2 px-1 text-sm">Responsable Fuente</th>
+            <th className="py-2 px-1 text-sm">Observaciones</th>
+            <th className="py-2 px-1 text-sm">Añadir</th>
+            <th className="py-2 px-1 text-sm">Editar</th>
+            <th className="py-2 px-1 text-sm">Borrar</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((row, index) => (
             <tr key={row.id} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
-              <td className="py-2 px-4">
-                <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600" />
+              <td className="py-2 px-2">
+                <input type="checkbox" className="form-checkbox h-5 w-3  text-blue-600" />
               </td>
               <td className="py-2 px-4">
                 {row.editar ? (
@@ -100,7 +100,7 @@ const Tabla = () => {
                   row.fecha
                 )}
               </td>
-              <td className="py-2 px-4">
+              <td className="py-2 px-2">
                 {row.editar ? (
                   <input
                     type="text"

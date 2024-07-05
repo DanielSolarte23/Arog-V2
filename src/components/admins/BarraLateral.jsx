@@ -61,18 +61,20 @@ export default function BarraLateral() {
         {/* Asignacion de tareas */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <Link to="Tareas">
-          <i className="fa-solid fa-list-check"></i>
-          <span className="text-[15px] ml-4 text-gray-900">
-            Asignacion de tareas
-          </span>
+            <i className="fa-solid fa-list-check"></i>
+            <span className="text-[15px] ml-4 text-gray-900">
+              Asignacion de tareas
+            </span>
           </Link>
         </div>
         {/* Gestion de usuarios */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
-          <i className="fa-solid fa-users"></i>
-          <span className="text-[15px] ml-4 text-gray-900">
-            Gestion de usuarios
-          </span>
+          <Link to="Usuarios">
+            <i className="fa-solid fa-users"></i>
+            <span className="text-[15px] ml-4 text-gray-900">
+              Gestion de usuarios
+            </span>
+          </Link>
         </div>
         {/* Pagos */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
@@ -81,10 +83,12 @@ export default function BarraLateral() {
         </div>
         {/* Registro de incidencias */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
-          <i className="fa-solid fa-circle-exclamation"></i>
-          <span className="text-[15px] ml-4 text-gray-900">
-            Registro incidencias
-          </span>
+          <Link to="Incidentes">
+            <i className="fa-solid fa-circle-exclamation"></i>
+            <span className="text-[15px] ml-4 text-gray-900">
+              Registro incidencias
+            </span>
+          </Link>
         </div>
         {/* Estadisticas y metricas */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
@@ -140,9 +144,11 @@ export default function BarraLateral() {
           id="submenu"
         >
           {/* Opciones del submenu */}
-          <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-            Registro de recoleccion <br /> en fuentes
-          </h1>
+          <Link to="Formulario1">
+            <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
+              Registro de recoleccion <br /> en fuentes
+            </h1>
+          </Link>
           <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
             Formato registro <br /> operativo en ruta
           </h1>
