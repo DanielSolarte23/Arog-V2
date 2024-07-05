@@ -1,24 +1,10 @@
-import React, { useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../../styles/homePage.css"
+import "../../styles/homePage.css";
+import { Link } from "react-router-dom";
+import LogoArog from "../../images/logoArogNuevo.png"
 
 export default function Header() {
-  useEffect(() => {
-    const header = document.getElementById("header1");
-
-    //Agrega funcion al hacer scroll hacia abajo
-    const handleScroll = () => {
-      header.style.position = "fixed";
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    //devuelve la barra a su estado original
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  //Funcion que agrega el estido display block al div al hacer click
+  /*   //Funcion que agrega el estido display block al div al hacer click
   const mostrar = () => {
     const nav = document.querySelector(".navegacion");
     //agrega estilo
@@ -27,52 +13,55 @@ export default function Header() {
     nav.classList.add('nav-responsive')
     //quita las clases que tenia anteriormente al hacer click
     nav.classList.remove("navegacion flex w-1/2 items-center")
-  };
+  }; */
 
   return (
-    <header id="header1" className="w-full h-[14%] flex px-8">
+    <header
+      id="header1"
+      className="w-full h-[14%] shadow-lg z-50 flex items-center bg-white fixed px-8 justify-between"
+    >
       {/* contenedor de logo y texto*/}
-      <section className="flex w-1/2 contenedor-logo">
-        {/* contenedor del logo*/}
-        <article className="w-[13%] h-full p-2 contenedor-img">
-          <img
-            className="w-full h-full object-fit"
-            src="src/images/logoArogNuevo.png"
-            alt="AROG"
-          />
-        </article>
-        {/* contenedor del texto*/}
-        <article className="flex items-center contenedor-text">
-          <p className="font-semibold text-[20px] text-left leading-5 flex-nowrap">
-            Asociación de <br /> recicladores de oficio <br />{" "}
-            <span className="text-[35px] leading-8 flex-nowrap font-bold">
-              GOLEROS{" "}
-            </span>
-          </p>
-        </article>
-      </section>
-      <div onClick={mostrar} id="menu-nav">x</div>
+      <a href="#Inicio" className="flex  ">
+        <section className="flex gap-2   contenedor-logo">
+          {/* contenedor del logo*/}
+            <img
+              className=" w-16 h-full"
+              src={LogoArog}
+              alt="AROG"
+            />
+          {/* contenedor del texto*/}
+          <article className="flex items-center contenedor-text">
+            <p className="font-semibold text-[16.5px]  leading-5 ">
+              Asociación de <br /> recicladores de oficio <br />
+              <span className="text-[35px] flex-nowrap font-bold">
+                GOLEROS
+              </span>
+            </p>
+          </article>
+        </section>
+      </a>
+      {/* <div onClick={mostrar} id="menu-nav"><i className="fa-solid fa-bars"></i></div> */}
       {/* contenedor del menu*/}
-      <nav className="flex w-1/2 items-center navegacion">
-        <ul className="flex w-full justify-between px-8 font-semibold text-xl">
+      <nav className="flex items-center navegacion">
+        <ul className="flex w-full justify-between gap-14 px-8 font-semibold text-xl">
           <div className="flex">
             <li>
-              <a href="#">
+              <a href="#Servicios">
                 Servicios <span className="p-2">|</span>
               </a>
             </li>
             <li>
-              <a href="#">Nosotros</a>
+              <a href="#SobreNosotros">Nosotros</a>
             </li>
           </div>
           <div className="flex">
             <li>
-              <a href="#">
+              <Link to="inicioSesion">
                 Iniciar sesión <span className="p-2">|</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">Crear cuenta</a>
+              <Link to="Registro">Crear cuenta</Link>
             </li>
           </div>
         </ul>
