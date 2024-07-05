@@ -4,7 +4,7 @@ import FormRegistro from "../../components/publicas/FormRegistroComponent"
 
 export default function Registro (){
     return (
-        <div className="h-screen w-full flex">
+        <div className="h-screen w-full flex justify-center md:justify-end">
         <LogoIS />
         <FormRegistro />
         </div>
