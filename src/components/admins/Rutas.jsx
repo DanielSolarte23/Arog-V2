@@ -1,9 +1,10 @@
 import React from 'react';
+import Maps from "../../images/Maps.png"
 
 export default function Rutas () {
   return (
-    <div className="flex flex-col w-full h-full">
-      <header className="flex items-center h-16 px-4  justify-between border-b shrink-0 md:px-6">
+    <div className="flex flex-col w-full h-[90%]">
+      <header className="flex items-center h-12 px-4  justify-between border-b shrink-0 md:px-6">
         <button className="inline-flex items-center bg-verde-principal justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 mr-4">
           + Añadir Ruta
         </button>
@@ -27,7 +28,7 @@ export default function Rutas () {
 
         </div>
       </header>
-      <main className="flex flex-col p-2">
+      <main className="flex flex-col p-1">
         <div className="flex flex-row  gap-4 ">
           <div className="flex flex-col justify-between  w-2/5">
           <div>
@@ -89,14 +90,14 @@ export default function Rutas () {
             </div>
             <div className="p-2 border-t">3 Rutas seleccionadas</div>
           </div>
-          <div className="w-3/5">
+          <div className="w-3/5 p-1 bg-gray-300">
             <img
-              src="/placeholder.svg"
+              src={Maps}
               alt="Map"
               className="w-full h-auto"
               width="600"
               height="250"
-              style={{ aspectRatio: '600 / 300', objectFit: 'cover' }}
+              style={{ aspectRatio: '600 / 290', objectFit: 'cover' }}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Lista() {
+export default function ListaTareas() {
     
   return (
     <div>
@@ -9,7 +9,7 @@ function Lista() {
         <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-300">
             <div>
                 <button id="dropdownActionButton" data-dropdown-toggle="dropdownAction" className="inline-flex items-center text-gray-500 bg-black border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-slate-200 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-200 dark:hover:border-gray-600 dark:focus:ring-gray-700 mt-6 ml-6" type="button">
-                    <span class="sr-only">Action button</span>
+                    <span className="sr-only">Action button</span>
                     <h1 className='text-black'>Filtrar Por</h1>
                     <svg className="w-2.5 h-2.5 ms-2.5  " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -47,14 +47,14 @@ function Lista() {
                             <label for="checkbox-all-search" className="sr-only">checkbox</label>
                         </div>
                     </th>
-                    <th scope="col" class="px-6 py-3">
+                    <th scope="col" className="px-6 py-3">
                     <h1 className='text-white'>Empleado</h1>
                     </th>
                     
-                    <th scope="col" class="px-6 py-3 ">
+                    <th scope="col" className="px-6 py-3 ">
                         <h1 className='mr-10 text-white'>Estado</h1>
                     </th>
-                    <th scope="col" class="px-6 py-3">
+                    <th scope="col" className="px-6 py-3">
                         <h1 className='text-white'>Accion</h1>
                     </th>
                 </tr>
@@ -191,4 +191,3 @@ function Lista() {
   )
 }
 
-export default Lista
