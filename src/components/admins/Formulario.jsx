@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import "@fortawesome/fontawesome-free"
 
-function Formulario() {
+
+export default function FormularioPerfil() {
   const [nombre, setNombre] = useState("");
   const [apellidos, setApellidos] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -36,7 +38,19 @@ function Formulario() {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-white rounded-lg shadow-md">
+    <div className=" flex h-full w-full">
+    <div className="h-full w-1/2 flex gap-10  flex-col items-center ">
+      <div className="w-40 h-40 border-4 rounded-full bg-slate-200 flex text-8xl items-center justify-center border-gray-500">
+      <i className="fa-solid fa-user w-20"></i>
+      </div>
+      <input type="file" />
+    </div>
+    <div className="container mx-auto p-4  bg-white   rounded-lg shadow-md">
+      <section className="w-full border-b mb-2 border-gray-500" >
+        <div className=" w-[10%] flex justify-center rounded-lg h-full py-2 border-t border-l border-r font-extrabold text-gray-700 border-gray-500">
+          <h2>Perfil</h2>
+        </div>
+      </section>
       <div className="grid grid-cols-2 gap-4">
         <div>
           <label htmlFor="nombre" className="block text-gray-700 font-bold mb-2">
@@ -45,7 +59,7 @@ function Formulario() {
           <input
             type="text"
             id="nombre"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -60,7 +74,7 @@ function Formulario() {
           <input
             type="text"
             id="apellidos"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={apellidos}
             onChange={(e) => setApellidos(e.target.value)}
           />
@@ -75,7 +89,7 @@ function Formulario() {
           <input
             type="tel"
             id="telefono"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={telefono}
             onChange={(e) => setTelefono(e.target.value)}
           />
@@ -90,7 +104,7 @@ function Formulario() {
           <input
             type="tel"
             id="movil"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={movil}
             onChange={(e) => setMovil(e.target.value)}
           />
@@ -105,7 +119,7 @@ function Formulario() {
           <input
             type="email"
             id="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -120,7 +134,7 @@ function Formulario() {
           <input
             type="text"
             id="ciudad"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={ciudad}
             onChange={(e) => setCiudad(e.target.value)}
           />
@@ -135,7 +149,7 @@ function Formulario() {
           <input
             type="password"
             id="contraseña"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={contraseña}
             onChange={(e) => setContraseña(e.target.value)}
           />
@@ -150,7 +164,7 @@ function Formulario() {
           <input
             type="password"
             id="verificarContraseña"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-gray-400   rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             value={verificarContraseña}
             onChange={(e) => setVerificarContraseña(e.target.value)}
           />
@@ -171,7 +185,7 @@ function Formulario() {
         </button>
       </div>
     </div>
+    </div>
   );
 }
 
-export default Formulario;

@@ -4,6 +4,8 @@ import InicioSesion from "../pages/publicas/InicioS-Page";
 import Registro from "../pages/publicas/Registro-Page";
 import PPage from "../pages/Admin/PPComponent";
 import Rutas from "../components/admins/Rutas";
+import FormularioPerfil from "../components/admins/Formulario";
+import AsignacionTareas from "../pages/Admin/AsignacionTareas";
 
 export default function RutasPublics() {
   return (
@@ -13,7 +15,9 @@ export default function RutasPublics() {
         <Route path="/inicioSesion" element={<InicioSesion />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/PPrincipal" element={<PPage />} >
-          <Route  element= />
+          <Route index element={<FormularioPerfil/>} />
+          <Route path="Rutas" element={<Rutas/>} />
+          <Route path="Tareas" element={<AsignacionTareas/>} />
         </Route>
       </Routes>
     </BrowserRouter>
