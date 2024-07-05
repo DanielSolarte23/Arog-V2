@@ -1,5 +1,6 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../../styles/publicas/barralateral.css"
+import "../../styles/publicas/barralateral.css";
+import { Link } from "react-router-dom";
 
 export default function BarraLateral() {
   function DropDown() {
@@ -8,7 +9,7 @@ export default function BarraLateral() {
     //Rotacion del icono de la barra co nmultiples opciones
     document.querySelector("#arrow").classList.toggle("rotate-0");
   }
-  function DropDownEstadisticas (){
+  function DropDownEstadisticas() {
     document.querySelector("#submenu2").classList.toggle("hidden");
     document.querySelector("#arrow2").classList.toggle("rotate-0");
   }
@@ -31,7 +32,6 @@ export default function BarraLateral() {
       <div className="sidebar shadow-xl h-[88%] scrollbar  fixed  bottom-0 xl:left-0 left-[-350px] p-2 w-[250px] overflow-y-auto text-center bg-white transition-all duration-700">
         <div className="text-gray-900 text-xl">
           <div className="p-2.5 mt-1 flex items-center justify-end">
-            
             {/* Boton de cerrado barra lateral */}
             <i
               className="fa-solid fa-xmark ml-20 cursor-pointer lg:hidden"
@@ -51,18 +51,26 @@ export default function BarraLateral() {
         </div>
         {/*Opcion Getion de rutas  */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
-        <i className="fa-solid fa-route"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Gestion de rutas </span>
+          <Link to="/Rutas">
+            <i className="fa-solid fa-route"></i>
+            <span className="text-[15px] ml-4 text-gray-900">
+              Gestion de rutas{" "}
+            </span>
+          </Link>
         </div>
         {/* Asignacion de tareas */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-list-check"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Asignacion de tareas</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Asignacion de tareas
+          </span>
         </div>
         {/* Gestion de usuarios */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-users"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Gestion de usuarios</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Gestion de usuarios
+          </span>
         </div>
         {/* Pagos */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
@@ -72,27 +80,37 @@ export default function BarraLateral() {
         {/* Registro de incidencias */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-circle-exclamation"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Registro incidencias</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Registro incidencias
+          </span>
         </div>
         {/* Estadisticas y metricas */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-chart-simple"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Estadisticas y metricas</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Estadisticas y metricas
+          </span>
         </div>
         {/* Historial de registro */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-clock"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Historial de Registro</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Historial de Registro
+          </span>
         </div>
         {/* Informes y certificados */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-file-circle-check"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Informes y certificados</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Informes y certificados
+          </span>
         </div>
         {/* Registro fotografico */}
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
           <i className="fa-solid fa-image"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Registro fotografico</span>
+          <span className="text-[15px] ml-4 text-gray-900">
+            Registro fotografico
+          </span>
         </div>
 
         {/* linea divisora */}
@@ -104,8 +122,13 @@ export default function BarraLateral() {
         >
           <i className="fa-solid fa-file-lines"></i>
           <div className="flex justify-between w-full items-center">
-            <span className="text-[15px] ml-1 text-gray-900">Formatos de registro</span>
-            <span className="text-sm rotate-180 transition-transform duration-100" id="arrow">
+            <span className="text-[15px] ml-1 text-gray-900">
+              Formatos de registro
+            </span>
+            <span
+              className="text-sm rotate-180 transition-transform duration-100"
+              id="arrow"
+            >
               <i className="fa-solid fa-chevron-up"></i>
             </span>
           </div>
@@ -114,14 +137,13 @@ export default function BarraLateral() {
           className="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 hidden transition-all duration-300"
           id="submenu"
         >
-        {/* Opciones del submenu */}
+          {/* Opciones del submenu */}
           <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
             Registro de recoleccion <br /> en fuentes
           </h1>
           <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-            Formato registro <br/> operativo en ruta
+            Formato registro <br /> operativo en ruta
           </h1>
-
         </div>
 
         <div
@@ -130,8 +152,13 @@ export default function BarraLateral() {
         >
           <i className="fa-solid fa-file-circle-check"></i>
           <div className="flex justify-between w-full items-center">
-            <span className="text-[14px]  text-gray-900">Informes y certificados</span>
-            <span className="text-sm rotate-180 transition-transform duration-100" id="arrow2">
+            <span className="text-[14px]  text-gray-900">
+              Informes y certificados
+            </span>
+            <span
+              className="text-sm rotate-180 transition-transform duration-100"
+              id="arrow2"
+            >
               <i className="fa-solid fa-chevron-up"></i>
             </span>
           </div>
@@ -140,14 +167,13 @@ export default function BarraLateral() {
           className="text-left text-sm font-thin mt-2 w-4/5 mx-auto text-gray-900 hidden transition-all duration-300"
           id="submenu2"
         >
-        {/* Opciones del submenu */}
+          {/* Opciones del submenu */}
           <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
             Informes
           </h1>
           <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
             Certificados
           </h1>
-
         </div>
 
         {/* Cerrar sesion */}
