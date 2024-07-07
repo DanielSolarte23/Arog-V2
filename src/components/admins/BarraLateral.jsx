@@ -1,27 +1,47 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../../styles/publicas/barralateral.css";
 import { Link } from "react-router-dom";
+import { useRef, useEffect } from "react";
 
 export default function BarraLateral() {
+  const sidebarRef = useRef(null);
+
   function DropDown() {
-    // Funcion de la barra multi opcion
     document.querySelector("#submenu").classList.toggle("hidden");
-    //Rotacion del icono de la barra co nmultiples opciones
     document.querySelector("#arrow").classList.toggle("rotate-0");
   }
+
   function DropDownEstadisticas() {
     document.querySelector("#submenu2").classList.toggle("hidden");
     document.querySelector("#arrow2").classList.toggle("rotate-0");
   }
 
-  //Funcion de apertura y cierre de la barra lateral
+  // Función de apertura y cierre de la barra lateral
   function Open() {
     document.querySelector(".sidebar").classList.toggle("left-[-350px]");
   }
 
+  // Cerrar barra lateral al hacer clic fuera de ella
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        document.querySelector(".sidebar").classList.add("left-[-350px]");
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [sidebarRef]);
+
+  // Cerrar barra lateral después de hacer clic en una de sus secciones
+  function handleSectionClick() {
+    document.querySelector(".sidebar").classList.add("left-[-350px]");
+  }
+
   return (
     <>
-      {/* boton para abrir la barra lateral */}
+      {/* Botón para abrir la barra lateral */}
       <span
         onClick={Open}
         className="absolute hover:animate-pulse text-white text-3xl top-[90px] left-4 cursor-pointer"
@@ -29,16 +49,19 @@ export default function BarraLateral() {
         <i className="fa-solid fa-circle-chevron-right text-gray-900 rounded-md"></i>
       </span>
       {/* Barra lateral */}
-      <div className="sidebar shadow-xl h-[88%] scrollbar  fixed  bottom-0  xl:left-0  left-[-350px] p-2 w-[250px] overflow-y-auto text-center bg-white transition-all duration-700">
+      <div
+        ref={sidebarRef}
+        className="sidebar shadow-xl h-[88%] scrollbar fixed z-50 bottom-0 xl:left-0 left-[-350px] p-2 w-[250px] overflow-y-auto text-center bg-white transition-all duration-700"
+      >
         <div className="text-gray-900 text-xl">
           <div className="p-2.5 mt-1 flex items-center justify-end">
-            {/* Boton de cerrado barra lateral */}
+            {/* Botón de cerrado barra lateral */}
             <i
               className="fa-solid fa-xmark ml-20 cursor-pointer lg:hidden"
               onClick={Open}
             ></i>
           </div>
-          {/* linea divisoria */}
+          {/* Línea divisoria */}
           <hr className="my-2 text-gray-900" />
         </div>
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-100 text-gray-900">
@@ -49,40 +72,57 @@ export default function BarraLateral() {
             className="text-[15px] ml-4 w-full bg-transparent focus:outline-none"
           />
         </div>
-        {/*Opcion Getion de rutas  */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        {/* Opción Gestión de rutas */}
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <Link to="Rutas">
             <i className="fa-solid fa-route"></i>
             <span className="text-[15px] ml-4 text-gray-900">
-              Gestion de rutas{" "}
+              Gestión de rutas
             </span>
           </Link>
         </div>
-        {/* Asignacion de tareas */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        {/* Asignación de tareas */}
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <Link to="Tareas">
             <i className="fa-solid fa-list-check"></i>
             <span className="text-[15px] ml-4 text-gray-900">
-              Asignacion de tareas
+              Asignación de tareas
             </span>
           </Link>
         </div>
-        {/* Gestion de usuarios */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        {/* Gestión de usuarios */}
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <Link to="Usuarios">
             <i className="fa-solid fa-users"></i>
             <span className="text-[15px] ml-4 text-gray-900">
-              Gestion de usuarios
+              Gestión de usuarios
             </span>
           </Link>
         </div>
         {/* Pagos */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
-          <i className="fa-solid fa-sack-dollar"></i>
-          <span className="text-[15px] ml-4 text-gray-900">Pagos</span>
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
+          <Link to="Pagos">
+            <i className="fa-solid fa-sack-dollar"></i>
+            <span className="text-[15px] ml-4 text-gray-900">Pagos</span>
+          </Link>
         </div>
         {/* Registro de incidencias */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <Link to="Incidentes">
             <i className="fa-solid fa-circle-exclamation"></i>
             <span className="text-[15px] ml-4 text-gray-900">
@@ -90,38 +130,50 @@ export default function BarraLateral() {
             </span>
           </Link>
         </div>
-        {/* Estadisticas y metricas */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        {/* Estadísticas y métricas */}
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <i className="fa-solid fa-chart-simple"></i>
           <span className="text-[15px] ml-2 whitespace-nowrap text-gray-900">
-            Estadisticas y metricas
+            Estadísticas y métricas
           </span>
         </div>
         {/* Historial de registro */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <i className="fa-solid fa-clock"></i>
           <span className="text-[15px] ml-4 text-gray-900">
             Historial de Registro
           </span>
         </div>
         {/* Informes y certificados */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <i className="fa-solid fa-file-circle-check"></i>
           <span className="text-[15px] ml-2 whitespace-nowrap text-gray-900">
             Informes y certificados
           </span>
         </div>
-        {/* Registro fotografico */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900">
+        {/* Registro fotográfico */}
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
+          onClick={handleSectionClick}
+        >
           <i className="fa-solid fa-image"></i>
           <span className="text-[15px] ml-4 text-gray-900">
-            Registro fotografico
+            Registro fotográfico
           </span>
         </div>
 
-        {/* linea divisora */}
+        {/* Línea divisoria */}
         <hr className="my-4 text-gray-500" />
-        {/* Multiopcion */}
+        {/* Multiopción */}
         <div
           className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
           onClick={DropDown}
@@ -145,11 +197,17 @@ export default function BarraLateral() {
         >
           {/* Opciones del submenu */}
           <Link to="Formulario1">
-            <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-              Registro de recoleccion <br /> en fuentes
+            <h1
+              className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1"
+              onClick={handleSectionClick}
+            >
+              Registro de recolección <br /> en fuentes
             </h1>
           </Link>
-          <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
+          <h1
+            className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1"
+            onClick={handleSectionClick}
+          >
             Formato registro <br /> operativo en ruta
           </h1>
         </div>
@@ -158,10 +216,10 @@ export default function BarraLateral() {
           className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
           onClick={DropDownEstadisticas}
         >
-          <i className="fa-solid fa-file-circle-check"></i>
+          <i className="fa-solid fa-chart-simple"></i>
           <div className="flex justify-between w-full items-center">
-            <span className="text-[14px]  text-gray-900">
-              Informes y certificados
+            <span className="text-[15px] ml-2 text-gray-900">
+              Estadísticas y métricas
             </span>
             <span
               className="text-sm rotate-180 transition-transform duration-100"
@@ -176,18 +234,18 @@ export default function BarraLateral() {
           id="submenu2"
         >
           {/* Opciones del submenu */}
-          <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-            Informes
+          <h1
+            className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1"
+            onClick={handleSectionClick}
+          >
+            Informe de producción
           </h1>
-          <h1 className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1">
-            Certificados
+          <h1
+            className="cursor-pointer p-2 hover:bg-gray-600 hover:text-white rounded-md mt-1"
+            onClick={handleSectionClick}
+          >
+            Informe de incidencias
           </h1>
-        </div>
-
-        {/* Cerrar sesion */}
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-red-200 text-white">
-          <i className="fa-solid fa-right-from-bracket text-red-600"></i>
-          <span className="text-[15px] ml-4 text-red-600">Cerrar</span>
         </div>
       </div>
     </>
