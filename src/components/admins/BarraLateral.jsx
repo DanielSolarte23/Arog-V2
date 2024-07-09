@@ -135,10 +135,12 @@ export default function BarraLateral() {
           className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-verde-principal text-gray-900"
           onClick={handleSectionClick}
         >
-          <i className="fa-solid fa-chart-simple"></i>
-          <span className="text-[15px] ml-2 whitespace-nowrap text-gray-900">
-            Estadísticas y métricas
-          </span>
+          <Link to="Estadisticas">
+            <i className="fa-solid fa-chart-simple"></i>
+            <span className="text-[15px] ml-2 whitespace-nowrap text-gray-900">
+              Estadísticas y métricas
+            </span>
+          </Link>
         </div>
         {/* Historial de registro */}
         <div

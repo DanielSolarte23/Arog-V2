@@ -11,6 +11,8 @@ import GestionUsuarios from "../components/admins/GestionUsuarios";
 import Tabla from "../components/admins/Tabla";
 import RegistroIncidentes from "../components/admins/Regisincidencia";
 import Pagos from "../components/admins/Pagos";
+import KeyMetrics from "../components/admins/Estadisticas";
+import Estadisticas from "../components/admins/Estadisticas";
 
 
 export default function RutasPublics() {
@@ -28,6 +30,7 @@ export default function RutasPublics() {
           <Route path="Pagos" element={<Pagos />} />
           <Route path="Formulario1" element={<Tabla />} />
           <Route path="Incidentes" element={<RegistroIncidentes />} />
+          <Route path="Estadisticas" element={<Estadisticas />} />
         </Route>
       </Routes>
     </BrowserRouter>

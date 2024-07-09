@@ -15,7 +15,6 @@ export default function HomePagina (){
         <Footer />
         <Pagina />
         <SobreNosotros />
-
         </div>
     )
 }
