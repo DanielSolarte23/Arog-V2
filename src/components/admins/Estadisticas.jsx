@@ -1,4 +1,6 @@
-export default function Estadisticas(){
+  
+  
+  export default function Estadisticas(){
   return (
     <div className="grid gap-6 p-4 md:p-6">
       <div className="grid md:grid-cols-2 gap-6">

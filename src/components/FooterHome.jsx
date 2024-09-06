@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Contactos from './Contactos'
 import Redes from './Redes'
 import Acerca from './Acerca'
@@ -20,4 +20,4 @@ const FooterHome = () => {
   )
 }
 
-export default Footer
+export default FooterHome

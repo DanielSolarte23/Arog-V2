@@ -5,15 +5,13 @@ import Registro from "../pages/publicas/Registro-Page";
 import PPage from "../pages/Admin/PPComponent";
 import Rutas from "../components/admins/Rutas";
 import Perfil from "../components/admins/Perfil";
-import FormularioPerfil from "../components/admins/Formulario";
 import AsignacionTareas from "../pages/Admin/AsignacionTareas";
 import GestionUsuarios from "../components/admins/GestionUsuarios";
 import Tabla from "../components/admins/Tabla";
 import RegistroIncidentes from "../components/admins/Regisincidencia";
 import Pagos from "../components/admins/Pagos";
-import KeyMetrics from "../components/admins/Estadisticas";
 import Estadisticas from "../components/admins/Estadisticas";
-
+import ImageGallery from "../components/admins/ImgGaleria";
 
 export default function RutasPublics() {
   return (
@@ -31,6 +29,7 @@ export default function RutasPublics() {
           <Route path="Formulario1" element={<Tabla />} />
           <Route path="Incidentes" element={<RegistroIncidentes />} />
           <Route path="Estadisticas" element={<Estadisticas />} />
+          <Route path="Galeria" element={<ImageGallery />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

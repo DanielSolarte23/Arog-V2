@@ -43,7 +43,7 @@ export default function Header() {
       {/* <div onClick={mostrar} id="menu-nav"><i className="fa-solid fa-bars"></i></div> */}
       {/* contenedor del menu*/}
       <nav className="flex items-center navegacion">
-        <ul className="flex w-full justify-between gap-14 px-8 font-semibold text-xl">
+        <ul className="flex w-full justify-between gap-14 px-8 font-semibold text-lg">
           <div className="flex">
             <li>
               <a href="#Servicios">
