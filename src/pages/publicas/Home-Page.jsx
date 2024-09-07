@@ -6,6 +6,7 @@ import SobreNosotros from "../../components/publicas/SobreNosotrosComponente"
 import "../../styles/homePage.css"
 import Pagina from "../../components/publicas/Card-Recoleccioncomponent"
 
+
 export default function HomePagina (){
     return (
         <div className="h-screen w-full">   

@@ -16,7 +16,7 @@ export default function PPage() {
       </header>
       <div className="flex h-[88%]">
         <BarraLateral />
-        <div className="flex-1 overflow-auto py-2 pl-14 pr-5">
+        <div className="flex-1 overflow-auto py-2 pl-14 pr-5 h-full ">
         <Outlet />
         </div>
       </div>
