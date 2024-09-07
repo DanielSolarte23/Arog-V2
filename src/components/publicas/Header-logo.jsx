@@ -4,17 +4,6 @@ import { Link } from "react-router-dom";
 import LogoArog from "../../images/logoArogNuevo.png"
 
 export default function Header() {
-  /*   //Funcion que agrega el estido display block al div al hacer click
-  const mostrar = () => {
-    const nav = document.querySelector(".navegacion");
-    //agrega estilo
-    nav.style.display = "block";
-    //agrega una nueva clase despues de hacer click
-    nav.classList.add('nav-responsive')
-    //quita las clases que tenia anteriormente al hacer click
-    nav.classList.remove("navegacion flex w-1/2 items-center")
-  }; */
-
   return (
     <header
       id="header1"
